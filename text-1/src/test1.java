@@ -2,19 +2,20 @@ import java.util.Scanner;
 
 public class test1 {
     public static void main(String[] args){
+       Scanner sc = new Scanner(System.in);
 
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Enter the user input:");
-        int s=scan.nextInt();
-        System.out.println(s);
+        System.out.print("Enter number:");
+        int n = sc.nextInt();
+        boolean ans=true;
+        int i=0;
+        for(i=2; i<=Math.sqrt(n); i++){
+            if(n%i==0){
+                ans=false;
+                break;
+            }
+        }
+        System.out.println(ans);
+        System.out.println(i);
 
-        System.out.print("Enter second number:");
-        float sum=scan.nextFloat();
-        System.out.println(sum);
-
-        System.out.print("Enter name: ");
-        scan.nextLine();
-        String nam=scan.nextLine();
-        System.out.print(nam);
     }
 }

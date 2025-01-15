@@ -1,13 +1,20 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 public class test2 {
     public static void main(String [] args){
-        Scanner scan = new Scanner(System.in);
+       StringBuilder sb = new StringBuilder("Hello");
 
-        System.out.print("Enter any character: ");
-        char ch = scan.next().charAt(0);
-        System.out.print("Enter Second any character: ");
-        char ch1 = scan.next().charAt(0);
-        System.out.println("The first character is:" + ch + "\nAnd Second character is:" + ch1);
+       for(int i=0; i<sb.length()/2; i++){
+           int last = sb.length()-1-i;
+           int font = i;
+
+           char fontChar = sb.charAt(font);
+           char lastChar = sb.charAt(last);
+
+           sb.setCharAt(last, fontChar);
+           sb.setCharAt(font, lastChar);
+       }
+        System.out.println(sb);
 
     }
 }
