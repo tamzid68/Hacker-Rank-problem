@@ -10,7 +10,9 @@ public class RemoveElement {
 
         int newLength = removeElement(nums, val);
 
-        System.out.println(Arrays.toString(Arrays.copyOf(nums, newLength)));
+        for (int i = 0; i < newLength; i++) {
+            System.out.print(nums[i] + " ");
+        }
     }
 
     public static int removeElement(int[] nums, int val) {
